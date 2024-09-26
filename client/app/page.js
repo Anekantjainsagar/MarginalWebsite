@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <div className="bg-gradient-to-tr from-black via-newDarkGreen to-black">
       <Hero />
+      
       <Achivements />
       <CourseOffered />
       <WhyUs />
