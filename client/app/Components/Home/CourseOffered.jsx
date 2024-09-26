@@ -2,7 +2,7 @@ import React from "react";
 
 const CourseOffered = () => {
   return (
-    <div className="bg-white py-6 my-[10vw]">
+    <div className="bg-white py-8 my-[10vw]">
       <h2 className="text-3xl font-semibold text-center">
         Courses Offered By Us
       </h2>

@@ -16,12 +16,12 @@ import "swiper/css/scrollbar";
 const OurClassroom = () => {
   return (
     <div className="pb-[10vw] text-white px-[5vw]">
-      <h2 className="text-3xl font-semibold text-center">
+      <h2 className="text-2xl md:text-3xl font-semibold text-center">
         Our <span className="text-[#ACE2E2]">Classroom</span>
       </h2>
-      <div className="grid grid-cols-2 mt-10">
-        <div className="pr-20">
-          <p className="text-lg mb-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 mt-5 md:mt-10">
+        <div className="md:pr-20">
+          <p className="md:text-lg mb-1 md:mb-3">
             Lorem ipsum odor amet, consectetuer adipiscing elit. Egestas tempor
             ipsum nisl et mattis montes suscipit elementum leo malesuada netus
             elit platea magna urna aenean ad tellus mattis non blandit integer
@@ -34,11 +34,11 @@ const OurClassroom = () => {
             elementum magnis platea in potenti convallis vestibulum dignissim
             placerat.
           </p>
-          <h6 className="text-newLightGreen text-2xl cursor-pointer">
+          <h6 className="text-newLightGreen text-xl md:text-2xl cursor-pointer">
             Know more About Us
           </h6>
         </div>
-        <div>
+        <div className="md:mt-0 mt-4">
           <Swiper
             slidesPerView={1}
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
@@ -60,7 +60,7 @@ const OurClassroom = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => (
               <SwiperSlide key={i}>
                 <div
-                  className={`mx-auto w-9/12 mb-10 h-[300px] bg-gray-300 cursor-pointer`}
+                  className={`mx-auto md:w-9/12 mb-10 h-[250px] md:h-[300px] rounded-lg bg-gray-300 cursor-pointer`}
                 ></div>
               </SwiperSlide>
             ))}

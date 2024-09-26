@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="px-8 h-[12vh] flex items-center text-white justify-between w-full fixed top-0 left-0 backdrop-blur-sm z-50">
+    <div className="px-8 border-b border-b-gray-300/5 h-[12vh] flex items-center text-white justify-between w-full fixed top-0 left-0 backdrop-blur-sm z-50">
       <Image
         src={"/logo.png"}
         width={1000}
@@ -26,10 +26,10 @@ const Navbar = () => {
         alt="Logo"
         className="w-[10vw]"
       />
-      <div className="flex items-center gap-x-8">
+      <div className="flex items-center">
         {data?.map((e, i) => {
           return (
-            <div key={i} className="cursor-pointer text-lg flex items-center">
+            <div key={i} className="cursor-pointer navText flex items-center">
               <span>{e?.name}</span>
               {e?.routes && (
                 <MdOutlineKeyboardArrowDown className="text-2xl ml-2" />
@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="gap-x-5 flex items-center">
         <IoCall className="text-[40px] border-2 aspect-square rounded-full p-2 cursor-pointer" />
         <IoIosSearch className="text-[40px] border-2 aspect-square rounded-full p-2 cursor-pointer" />
-        <button className="px-8 py-2 rounded-2xl text-xl font-semibold text-newDarkGreen bg-white">
+        <button className="px-8 py-2 rounded-2xl text-lg font-semibold text-newDarkGreen bg-white">
           Login
         </button>
       </div>

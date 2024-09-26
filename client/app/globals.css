@@ -8,3 +8,28 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.navText {
+  @apply text-sm min-[1500px]:text-base min-[1730px]:text-lg mx-2 min-[1420px]:mx-3 min-[1640px]:mx-5;
+}
+
+.intl-tel-input .country-list {
+  color: black;
+}
+
+.intl-tel-input .selected-flag {
+  color: white;
+  border: none;
+}
+
+.intl-tel-input .country-list .country {
+  color: black;
+}
+
+.intl-tel-input input {
+  color: white !important; /* Ensure the input text is white */
+  border: 1px solid white; /* Add white border */
+  outline: none;
+  border-radius: 12px;
+  padding: 8px 10px;
+}

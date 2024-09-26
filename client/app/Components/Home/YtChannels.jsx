@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useContext } from "react";
 import {
   Navigation,
   Pagination,
@@ -13,33 +13,32 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import Context from "@/app/Context/Context";
 
 const YtChannels = () => {
+  const { width } = useContext(Context);
+
   return (
     <div className="pb-[10vw] px-[5vw] text-white">
-      <h2 className="text-3xl font-semibold text-center">
+      <h2 className="text-2xl md:text-3xl font-semibold text-center">
         Our <span className="text-[#ACE2E2]">YouTube Channels</span>
       </h2>
-      <div className={`mt-10 relative`}>
-        {/* Left Arrow */}
+      <div className={`mt-5 md:mt-10 relative`}>
         <div
-          className="swiper-button-prev-custom-channels text-[50px] absolute top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full cursor-pointer"
+          className="swiper-button-prev-custom-channels text-[40px] md:text-[60px] absolute top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full cursor-pointer"
           role="button"
         >
           <MdKeyboardArrowLeft />
         </div>
-
-        {/* Right Arrow */}
         <div
-          className="swiper-button-next-custom-channels text-[50px] absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full cursor-pointer"
+          className="swiper-button-next-custom-channels text-[40px] md:text-[60px] absolute right-0 top-1/2 transform -translate-y-1/2 z-10 text-white rounded-full cursor-pointer"
           role="button"
         >
           <MdKeyboardArrowRight />
         </div>
-
         <div className="px-10">
           <Swiper
-            slidesPerView={3}
+            slidesPerView={width > 600 ? 3 : 1}
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
             navigation={{
               prevEl: ".swiper-button-prev-custom-channels",
@@ -59,7 +58,7 @@ const YtChannels = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => (
               <SwiperSlide key={i}>
                 <div
-                  className={`mx-auto w-9/12 mb-10 h-[250px] bg-gray-300 cursor-pointer`}
+                  className={`mx-auto w-11/12 md:w-9/12 mb-10 h-[180px] md:h-[250px] rounded-lg bg-gray-300 cursor-pointer`}
                 ></div>
               </SwiperSlide>
             ))}
