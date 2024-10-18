@@ -11,11 +11,19 @@ const Navbar = () => {
   const pathname = usePathname();
   const data = [
     { name: "About Us", route: "/about" },
-    { name: "Activities", routes: [{ name: "About Us", route: "/" }] },
+    {
+      name: "Activities",
+      routes: [{ name: "About Us", route: "/" }],
+      route: "/activities",
+    },
     { name: "Class 11th", routes: [{ name: "About Us", route: "/" }] },
     { name: "Class 12th", routes: [{ name: "About Us", route: "/" }] },
     { name: "CUET", routes: [{ name: "About Us", route: "/" }] },
-    { name: "CA Foundation", routes: [{ name: "About Us", route: "/" }] },
+    {
+      name: "CA Foundation",
+      routes: [{ name: "About Us", route: "/" }],
+      route: "/ca-foundation",
+    },
     { name: "IPMAT", routes: [{ name: "About Us", route: "/" }] },
     { name: "Graduation Programs", route: "/" },
   ];
@@ -36,7 +44,7 @@ const Navbar = () => {
             <div
               key={i}
               className={`cursor-pointer navText ${
-                e?.route === pathname && "text-textGreen"
+                pathname?.includes(e?.route) && "text-textGreen"
               } flex items-center`}
               onClick={() => {
                 if (e?.route) {
