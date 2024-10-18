@@ -11,6 +11,7 @@ module.exports = {
         newDarkGreen: "#007292",
         newLightGreen: "#ACE2E2",
         footerGreen: "#003B4D",
+        textGreen: "#ACE2E2",
       },
     },
   },

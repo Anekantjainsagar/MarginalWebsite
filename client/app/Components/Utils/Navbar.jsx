@@ -3,11 +3,14 @@ import Image from "next/image";
 import React from "react";
 import { IoCall } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdHistoryToggleOff, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const history = useRouter();
+  const pathname = usePathname();
   const data = [
-    { name: "About Us", route: "/" },
+    { name: "About Us", route: "/about" },
     { name: "Activities", routes: [{ name: "About Us", route: "/" }] },
     { name: "Class 11th", routes: [{ name: "About Us", route: "/" }] },
     { name: "Class 12th", routes: [{ name: "About Us", route: "/" }] },
@@ -24,12 +27,23 @@ const Navbar = () => {
         width={1000}
         height={1000}
         alt="Logo"
-        className="w-[10vw]"
+        onClick={() => history.push("/")}
+        className="w-[10vw] cursor-pointer"
       />
       <div className="flex items-center">
         {data?.map((e, i) => {
           return (
-            <div key={i} className="cursor-pointer navText flex items-center">
+            <div
+              key={i}
+              className={`cursor-pointer navText ${
+                e?.route === pathname && "text-textGreen"
+              } flex items-center`}
+              onClick={() => {
+                if (e?.route) {
+                  history.push(e?.route);
+                }
+              }}
+            >
               <span>{e?.name}</span>
               {e?.routes && (
                 <MdOutlineKeyboardArrowDown className="text-2xl ml-2" />
