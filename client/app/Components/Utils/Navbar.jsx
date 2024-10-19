@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { IoCall } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
-import { MdHistoryToggleOff, MdOutlineKeyboardArrowDown } from "react-icons/md";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { usePathname, useRouter } from "next/navigation";
 
 const Navbar = () => {
@@ -25,7 +25,7 @@ const Navbar = () => {
       route: "/ca-foundation",
     },
     { name: "IPMAT", routes: [{ name: "About Us", route: "/" }] },
-    { name: "Graduation Programs", route: "/" },
+    { name: "Graduation Programs" },
   ];
 
   return (
@@ -63,7 +63,10 @@ const Navbar = () => {
       <div className="gap-x-5 flex items-center">
         <IoCall className="text-[40px] border-2 aspect-square rounded-full p-2 cursor-pointer" />
         <IoIosSearch className="text-[40px] border-2 aspect-square rounded-full p-2 cursor-pointer" />
-        <button className="px-8 py-2 rounded-2xl text-lg font-semibold text-newDarkGreen bg-white">
+        <button
+          onClick={() => history.push("/login")}
+          className="px-8 py-2 rounded-2xl text-lg font-semibold text-newDarkGreen bg-white"
+        >
           Login
         </button>
       </div>
