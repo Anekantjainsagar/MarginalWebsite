@@ -16,8 +16,8 @@ import Image from "next/image";
 
 const Achievements = () => {
   return (
-    <div className="pb-[5vw] text-white px-[6vw]">
-      <h4 className="text-3xl font-semibold text-center mb-5">
+    <div className="pb-[8vw] md:pb-[5vw] text-white px-[5vw] md:px-[6vw]">
+      <h4 className="text-xl md:text-3xl font-semibold text-center mb-3 md:mb-5">
         Our Dynamic Team
       </h4>{" "}
       <Swiper

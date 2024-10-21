@@ -1,7 +1,5 @@
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "./Components/Utils/Navbar";
-import Footer from "./Components/Utils/Footer";
 import State from "@/app/Context/State";
 
 const inter = Poppins({
@@ -18,11 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <State>
-          <Navbar />
-          {children}
-          <Footer />
-        </State>
+        <State>{children}</State>
       </body>
     </html>
   );

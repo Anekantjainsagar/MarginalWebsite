@@ -1,27 +1,27 @@
 import React from "react";
-import HeroCourse from "../Components/Courses/Hero";
+import HeroCourse from "../../Components/Courses/Hero";
 import Image from "next/image";
-import CourseDetails from "../Components/Courses/CourseDetails";
-import Faculties from "../Components/Courses/Faculties";
-import Faq from "../Components/Courses/Faq";
+import CourseDetails from "../../Components/Courses/CourseDetails";
+import Faculties from "../../Components/Courses/Faculties";
+import Faq from "../../Components/Courses/Faq";
 
 const CaFoundation = () => {
   return (
     <div className="bg-gradient-to-tr from-black via-newDarkGreen to-black">
       <HeroCourse />
-      <div className="pt-[2vw] pb-[8vw]">
-        <h4 className="text-3xl font-semibold text-center mb-5 text-white">
+      <div className="pt-[2vw] md:px-0 px-[2vw] pb-[8vw]">
+        <h4 className="text-xl md:text-3xl font-semibold text-center mb-3 md:mb-5 text-white">
           CA Foundation
         </h4>
-        <div className="px-[4vw] flex items-start justify-between text-white">
+        <div className="px-[4vw] flex md:flex-row flex-col items-start justify-between text-white">
           <Image
             src="/course/students.png"
             width={1000}
             height={1000}
             alt="Activity"
-            className="w-[47%] h-[45vh] object-cover rounded-2xl"
+            className="md:w-[47%] h-[30vh] md:h-[45vh] object-cover rounded-2xl"
           />
-          <div className="w-6/12 text-xl">
+          <div className="md:w-6/12 md:mt-0 mt-2 text-sm md:text-xl">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
               poseure, nisl eget fringilla pretium, massa sem consequat sapien,
@@ -40,8 +40,8 @@ const CaFoundation = () => {
             </p>
           </div>
         </div>
-        <div className="mt-10 px-[4vw] text-white">
-          <h6 className="text-2xl font-medium mb-2">
+        <div className="mt-10 px-[5vw] md:px-[4vw] text-white">
+          <h6 className="text-lg md:text-2xl font-medium mb-2">
             MAC Attributes for CA Foundation Classes
           </h6>
           {[
@@ -55,7 +55,7 @@ const CaFoundation = () => {
             "Provision of Live, Recorded and Offline classes.",
           ].map((e, i) => {
             return (
-              <li key={i} className="text-xl mb-0.5">
+              <li key={i} className="text-sm md:text-xl mb-0.5">
                 {e}
               </li>
             );

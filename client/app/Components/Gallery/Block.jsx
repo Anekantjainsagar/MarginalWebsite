@@ -13,7 +13,7 @@ const Block = () => {
         // history.push(`/activities/event`);
       }}
     >
-      <div className="h-[50vh] relative">
+      <div className="h-[30vh] md:h-[50vh] relative">
         <Image
           src="/activities/activity.png"
           width={1000}

@@ -2,11 +2,11 @@ import React from "react";
 
 const CourseOffered = () => {
   return (
-    <div className="text-white py-8 my-[5vw]">
-      <h2 className="text-3xl font-semibold text-center">
+    <div className="text-white py-8 my-[8vw] md:my-[5vw] md:px-0 px-[5vw]">
+      <h2 className="text-xl md:text-3xl font-semibold text-center">
         Courses Offered By Us
       </h2>
-      <div className="grid grid-cols-4 px-[5vw] mt-6 w-full">
+      <div className="grid md:grid-cols-4 px-[5vw] mt-2 md:mt-6 w-full">
         {[
           {
             name: "Regular Course",
@@ -42,18 +42,16 @@ const CourseOffered = () => {
         ].map((e, i, arr) => {
           return (
             <div
-              className={`px-[2vw] py-4 ${
-                arr.length - 1 != i && "border-r"
+              className={`md:px-[2vw] py-2 md:py-4 ${
+                arr.length - 1 != i && "border-r-0 md:border-r"
               } border-r-[#A5A5A5]`}
               key={i}
             >
-              <h4 className="text-2xl font-medium text-white">
-                {e?.name}
-              </h4>
-              <ul className="list-disc ml-5 mt-2">
+              <h4 className="text-lg md:text-2xl font-medium text-white">{e?.name}</h4>
+              <ul className="list-disc ml-6 md:ml-5 mt-1 md:mt-2">
                 {e?.list?.map((el, i) => {
                   return (
-                    <li key={i} className="text-lg text-textGreen">
+                    <li key={i} className="text-sm md:text-lg text-textGreen">
                       {el}
                     </li>
                   );

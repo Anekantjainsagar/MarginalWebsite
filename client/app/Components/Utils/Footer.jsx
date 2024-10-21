@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="bg-white pt-[15vw] md:pt-[5vw] px-10 md:px-[5vw] text-footerGreen">
+    <div className="bg-white pt-[15vw] md:pt-[5vw] px-8 md:px-[5vw] text-footerGreen">
       <div className="grid grid-cols-1 md:grid-cols-4 w-full md:gap-y-0 gap-y-6">
         <div className="flex flex-col items-center md:items-start">
           <Image
@@ -13,7 +13,7 @@ const Footer = () => {
             height={1000}
             className="w-6/12 md:w-5/12"
           />
-          <p className="mt-2 text-center md:text-start w-10/12 md:w-8/12">
+          <p className="mt-2 text-center text-sm md:text-base md:text-start w-11/12 md:w-8/12">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
             poseure, nisl eget fringilla pretium, massa sem consequat sapien,
             sit amet bibendum ante nunc ac nulla. Sed eget ultricies magna.
@@ -21,7 +21,7 @@ const Footer = () => {
           </p>
         </div>
         <div>
-          <h3 className="text-2xl font-semibold md:text-start text-center">
+          <h3 className="text-xl md:text-2xl font-semibold md:text-start text-center">
             Services
           </h3>
           {[
@@ -35,14 +35,17 @@ const Footer = () => {
             { name: "Graduation Programs" },
           ].map((e, i) => {
             return (
-              <p className="my-0.5 md:text-start text-center" key={i}>
+              <p
+                className="my-0.5 md:text-start text-sm md:text-base text-center"
+                key={i}
+              >
                 {e?.name}
               </p>
             );
           })}
         </div>
-        <div className="md:w-9/12">
-          <h3 className="text-2xl font-semibold md:text-start text-center">
+        <div className="w-11/12 mx-auto md:w-9/12">
+          <h3 className="text-xl md:text-2xl font-semibold md:text-start text-center">
             Contact Us
           </h3>
           <div className="my-2.5 gap-x-4 flex md:flex-row md:gap-y-0 gap-y-1.5 flex-col items-center md:justify-start justify-center">
@@ -57,7 +60,7 @@ const Footer = () => {
                 fill="#003B4D"
               />
             </svg>
-            <p className="-mt-1">+91 9993888160</p>
+            <p className="-mt-1 text-sm md:text-base">+91 9993888160</p>
           </div>
           <div className="my-2.5 gap-x-4 flex md:flex-row md:gap-y-0 gap-y-1.5 flex-col items-center md:justify-start justify-center">
             <svg
@@ -71,7 +74,7 @@ const Footer = () => {
                 fill="#003B4D"
               />
             </svg>
-            <p className="-mt-1">+91 6262888170</p>
+            <p className="-mt-1 text-sm md:text-base">+91 6262888170</p>
           </div>
           <div className="my-3 gap-x-4 flex md:flex-row md:gap-y-0 gap-y-1.5 flex-col items-center md:items-start md:justify-start justify-end w-full">
             <svg
@@ -93,13 +96,13 @@ const Footer = () => {
                 strokeLinejoin="round"
               />
             </svg>
-            <p className="-mt-1 text-center md:text-left">
+            <p className="-mt-1 text-center md:text-left text-sm md:text-base">
               219, 3rd floor, near Gaurav Dairy, Indrapuri C-Sector, Bhopal
             </p>
           </div>
         </div>
         <div>
-          <h3 className="text-2xl font-semibold md:text-start text-center">
+          <h3 className="text-xl md:text-2xl font-semibold md:text-start text-center">
             Links
           </h3>
           {[
@@ -108,14 +111,17 @@ const Footer = () => {
             { name: "Terms & Conditions" },
           ].map((e, i) => {
             return (
-              <p className="my-0.5 md:text-start text-center" key={i}>
+              <p
+                className="my-0.5 md:text-start text-sm md:text-base text-center"
+                key={i}
+              >
                 {e?.name}
               </p>
             );
           })}
         </div>
       </div>
-      <div className="h-[1px] bg-gray-500 md:bg-black mx-auto w-11/12 md:w-full my-6 md:my-10"></div>
+      <div className="h-[1px] bg-gray-500 md:bg-black mx-auto w-11/12 md:w-full my-4 md:my-10"></div>
       <div className="pb-10 flex items-center gap-x-4 md:gap-x-6 justify-center">
         {[
           "/icons/whatsapp.png",

@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const CourseDetails = () => {
   return (
-    <div className="bg-white py-12 px-[4vw] flex flex-col items-center">
-      <h4 className="text-3xl font-semibold mb-2 text-black text-center">
+    <div className="bg-white py-4 md:py-12 px-[5vw] md:px-[4vw] flex flex-col items-center">
+      <h4 className="text-xl md:text-3xl font-semibold mb-1 md:mb-2 text-black text-center">
         Course <span className="text-newDarkGreen text-center">Details</span>
       </h4>
-      <div className="border border-black w-full mt-3">
-        <p className="text-center border-b border-b-black text-lg font-semibold py-2.5">
+      <div className="border border-black w-full mt-1.5 md:mt-3">
+        <p className="text-center border-b border-b-black text-base md:text-lg font-semibold py-1.5 md:py-2.5">
           MAC CA Foundation Classes Details
         </p>
         {[
@@ -40,17 +40,27 @@ const CourseDetails = () => {
               }`}
             >
               <p
-                className={`w-3/12 border-r-black py-2.5 font-semibold text-center border-r `}
+                className={`w-5/12 md:w-3/12 text-sm md:text-base py-1.5 md:py-2.5 font-semibold text-center`}
               >
                 {e?.title}
               </p>
-              <p className={`w-9/12 py-2.5 px-4`}>{e?.value}</p>
+              <p
+                className={`w-7/12 md:w-9/12 py-1.5 md:py-2.5 text-sm md:text-base border-l border-l-black px-3 md:px-4`}
+              >
+                {e?.value}
+              </p>
             </div>
           );
         })}
         <div className={`flex items-center border-t border-t-black`}>
-          <p className={`w-3/12 py-2.5 font-semibold text-center`}>Mock Test</p>
-          <div className={`w-9/12 py-2.5 mr-1 px-4 border-l border-l-black`}>
+          <p
+            className={`w-5/12 md:w-3/12 text-sm md:text-base py-2.5 font-semibold text-center`}
+          >
+            Mock Test
+          </p>
+          <div
+            className={`w-7/12 md:w-9/12 text-sm md:text-base py-2.5 md:mr-1 px-3 md:px-4 border-l border-l-black`}
+          >
             <p className="mb-1">6 mock tests</p>
             <ol type="1">
               {[
@@ -71,11 +81,11 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
-      <button className="bg-newDarkGreen text-white px-10 py-3 rounded-lg font-semibold text-lg mt-5">
+      <button className="bg-newDarkGreen text-white px-10 py-2 md:py-3 rounded-lg font-semibold text-sm md:text-lg mt-3 md:mt-5">
         Know More
       </button>
     </div>
   );
-}
+};
 
-export default CourseDetails
+export default CourseDetails;

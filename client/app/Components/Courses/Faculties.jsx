@@ -16,13 +16,15 @@ import Image from "next/image";
 
 const Faculties = () => {
   return (
-    <div className="py-[8vw] text-white px-[6vw]">
-      <h4 className="text-3xl font-semibold mb-5 text-white text-center">
+    <div className="py-[8vw] text-white px-[5vw] md:px-[6vw]">
+      <h4 className="text-xl md:text-3xl font-semibold mb-3 md:mb-5 text-white text-center">
         Respective{" "}
         <span className="text-newLightGreen text-center">Faculties</span>
       </h4>
       <Swiper
-        slidesPerView={3}
+        slidesPerView={
+          typeof window != "undefined" && window.innerWidth < 600 ? 1 : 3
+        }
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         pagination={{
           clickable: true,
@@ -49,8 +51,8 @@ const Faculties = () => {
                   className="w-8/12"
                 />
                 <div className="absolute bottom-2 left-4">
-                  <h6 className="font-semibold text-2xl mt-2">Sarthak Gour</h6>
-                  <p className="text-lg my-0.5">Title/Designation</p>
+                  <h6 className="font-semibold text-lg md:text-2xl mt-2">Sarthak Gour</h6>
+                  <p className="text-sm md:text-lg md:my-0.5">Title/Designation</p>
                 </div>
               </div>
             </div>

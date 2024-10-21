@@ -58,25 +58,27 @@ const Achievements = () => {
 
   return (
     <div className="text-white px-[5vw]">
-      <h2 className="text-3xl font-semibold text-center">Achievements</h2>
-      <p className="text-lg text-center mt-1.5">
+      <h2 className="text-xl md:text-3xl font-semibold text-center">
+        Achievements
+      </h2>
+      <p className="text-sm md:text-lg text-center md:mt-1.5">
         Ranked As No. 1 CA Coaching Institute in Bhopal
       </p>
-      <div className="flex justify-center items-center mt-10">
-        <div className="w-4/12 pr-20" ref={textContainerRef}>
-          <h4 className="text-3xl font-semibold text-end">
+      <div className="flex md:flex-row flex-col justify-center items-center mt-5 md:mt-10">
+        <div className="md:w-4/12 md:pr-20" ref={textContainerRef}>
+          <h4 className="text-xl md:text-3xl font-semibold text-center md:text-end">
             {texts[currentTextIndex].title}
           </h4>
-          <p className="text-lg font-light text-end mt-2">
+          <p className="text-sm md:text-lg font-light text-center md:text-end mt-0.5 md:mt-2">
             {texts[currentTextIndex].description}
           </p>
         </div>
-        <div className="w-[3px] bg-gray-400 h-[400px] mr-24"></div>
-        <div className="ellipse-container relative w-[500px] h-[500px]">
+        <div className="w-[3px] bg-gray-400 md:block hidden h-[400px] mr-24"></div>
+        <div className="ellipse-container relative md:mt-0 mt-8 w-[250px] md:w-[500px] h-[250px] md:h-[500px]">
           {Array.from({ length: 6 }).map((_, index) => (
             <div
               key={index}
-              className={`circle absolute w-32 h-32 border-2 border-gray-400 rounded-full`}
+              className={`circle absolute w-20 md:w-32 h-20 md:h-32 border-2 border-gray-400 rounded-full`}
               style={{
                 top: `${50 + 40 * Math.sin((index * Math.PI) / 3)}%`,
                 left: `${50 + 40 * Math.cos((index * Math.PI) / 3)}%`,

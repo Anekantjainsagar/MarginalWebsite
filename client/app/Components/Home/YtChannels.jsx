@@ -19,7 +19,7 @@ const YtChannels = () => {
   const { width } = useContext(Context);
 
   return (
-    <div className="pb-[10vw] px-[5vw] text-white">
+    <div className="pb-[6vw] md:pb-[10vw] px-[5vw] text-white">
       <h2 className="text-2xl md:text-3xl font-semibold text-center">
         Our <span className="text-[#ACE2E2]">YouTube Channels</span>
       </h2>
@@ -36,7 +36,7 @@ const YtChannels = () => {
         >
           <MdKeyboardArrowRight />
         </div>
-        <div className="px-10">
+        <div className="px-6 md:px-10">
           <Swiper
             slidesPerView={width > 600 ? 3 : 1}
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}

@@ -2,11 +2,11 @@ import React from "react";
 
 const CourseOffered = () => {
   return (
-    <div className="bg-white py-8 my-[10vw]">
-      <h2 className="text-3xl font-semibold text-center">
+    <div className="bg-white py-6 md:py-8 my-[10vw]">
+      <h2 className="text-xl md:text-3xl font-semibold text-center">
         Courses Offered By Us
       </h2>
-      <div className="grid grid-cols-4 px-[5vw] mt-6 w-full">
+      <div className="grid md:grid-cols-4 px-[5vw] md:mt-6 w-full">
         {[
           {
             name: "Regular Course",
@@ -42,18 +42,18 @@ const CourseOffered = () => {
         ].map((e, i, arr) => {
           return (
             <div
-              className={`px-[2vw] py-4 ${
-                arr.length - 1 != i && "border-r"
+              className={`px-[2vw] py-1.5 md:py-4 ${
+                arr.length - 1 != i && "md:border-r"
               } border-r-[#A5A5A5]`}
               key={i}
             >
-              <h4 className="text-2xl font-semibold text-newDarkGreen">
+              <h4 className="text-lg md:text-2xl font-semibold text-newDarkGreen">
                 {e?.name}
               </h4>
-              <ul className="list-disc ml-5 mt-2">
+              <ul className="list-disc ml-5 md:mt-2">
                 {e?.list?.map((el, i) => {
                   return (
-                    <li key={i} className="text-lg">
+                    <li key={i} className="text-sm md:text-lg">
                       {el}
                     </li>
                   );
