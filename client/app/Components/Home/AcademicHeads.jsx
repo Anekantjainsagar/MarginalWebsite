@@ -66,13 +66,13 @@ const AcademicHeads = () => {
       </h2>
       <div className="flex md:flex-row flex-col justify-center items-center mt-3 md:mt-10">
         <div className="md:w-4/12 md:pr-20" ref={textContainerRef}>
-          <h4 className="text-3xl font-semibold text-end">
+          <h4 className="text-xl md:text-3xl font-semibold text-center md:text-end">
             {texts[currentTextIndex].title}
           </h4>
-          <h6 className="text-xl text-end mt-2">
+          <h6 className="md:text-xl text-center md:text-end md:mt-2">
             {texts[currentTextIndex].designation}
           </h6>
-          <p className="text-lg font-light text-end mt-2">
+          <p className="md:text-lg text-sm font-light text-center md:text-end md:mt-2">
             {texts[currentTextIndex].description}
           </p>
         </div>

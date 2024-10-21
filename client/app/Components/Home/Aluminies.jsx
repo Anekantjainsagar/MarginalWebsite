@@ -16,13 +16,13 @@ import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const Aluminies = () => {
   return (
-    <div className="mx-[3vw] p-[4vw] md:p-[3vw] mb-[10vw] bg-[#F3F3F3] flex md:flex-row flex-col justify-between items-center rounded-lg">
+    <div className="mx-[6vw] md:mx-[3vw] p-[4vw] md:p-[3vw] mb-[10vw] bg-[#F3F3F3] flex md:flex-row flex-col justify-between items-center rounded-lg">
       <div className="md:w-4/12">
-        <h2 className="text-3xl md:text-4xl md:w-8/12 font-semibold">
+        <h2 className="text-xl md:text-4xl md:w-8/12 font-semibold">
           Straight from the{" "}
           <span className="text-newDarkGreen">Alumni Diaries</span>
         </h2>
-        <p className="text-lg md:text-xl mt-1 md:mt-2 md:w-10/12 font-light">
+        <p className="text-base md:text-xl mt-1 md:mt-2 md:w-10/12 font-light">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
           cupiditate quia distinctio beatae dicta tenetur accusantium pariatur
           quos, voluptates nam totam sed assumenda ex.
@@ -63,12 +63,12 @@ const Aluminies = () => {
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => (
               <SwiperSlide key={i}>
                 <div
-                  className={`mx-auto p-5 w-11/12 md:w-10/12 bg-white cursor-pointer rounded-xl flex`}
+                  className={`mx-auto p-5 w-11/12 md:w-10/12 bg-white cursor-pointer rounded-xl flex md:flex-row flex-col`}
                 >
-                  <div className="md:h-[200px] mr-5 border-2 border-black rounded-xl w-6/12"></div>
-                  <div className="w-6/12">
-                    <h5 className="text-xl md:text-2xl font-semibold">Name</h5>
-                    <p className="md:text-lg font-light">
+                  <div className="md:h-[200px] h-[100px] md:mr-5 border-2 border-black rounded-xl w-full md:w-6/12"></div>
+                  <div className="md:w-6/12 md:mt-0 mt-2">
+                    <h5 className="text-lg md:text-2xl font-semibold">Name</h5>
+                    <p className="md:text-lg text-sm font-light">
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                       Cras poseure, nisl eget fringilla pretium, massa sem
                       consequat sapien, sit amet bibendum ante nunc ac nulla.
