@@ -7,12 +7,16 @@ import Lottie from "react-lottie-player";
 const UserLogin = () => {
   const [animationData, setAnimationData] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isClient, setIsClient] = useState(false); // Check if running in the browser
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
 
   useEffect(() => {
+    // Set isClient to true when this runs in the browser
+    setIsClient(true);
+
     fetch(
       "https://lottie.host/3755c644-e5b7-4cda-9fe5-3e68f00731fc/XBjPsNOTo3.json"
     )
@@ -24,7 +28,7 @@ const UserLogin = () => {
   return (
     <div className="h-[85vh] overflow-hidden bg-gradient-to-tr from-gray-800 via-newDarkGreen to-gray-800 px-[6vw] flex justify-between items-center">
       <div className="w-6/12">
-        {animationData && (
+        {isClient && animationData && (
           <Lottie
             loop
             animationData={animationData}
