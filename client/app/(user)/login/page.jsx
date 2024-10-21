@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import Lottie from "react-lottie-player";
+// import Lottie from "react-lottie-player";
 
 const UserLogin = () => {
   const [animationData, setAnimationData] = useState(null);
@@ -28,14 +28,14 @@ const UserLogin = () => {
   return (
     <div className="h-[85vh] overflow-hidden bg-gradient-to-tr from-gray-800 via-newDarkGreen to-gray-800 px-[6vw] flex justify-between items-center">
       <div className="w-6/12">
-        {isClient && animationData && (
+        {/* {isClient && animationData && (
           <Lottie
             loop
             animationData={animationData}
             play
             style={{ width: "auto", height: "auto" }}
           />
-        )}
+        )} */}
       </div>
       <div className="w-[40%] bg-footerGreen text-white rounded-xl flex flex-col items-center justify-center py-8">
         <Image
