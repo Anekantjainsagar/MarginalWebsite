@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 // import Lottie from "react-lottie-player";
@@ -7,14 +8,14 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const UserLogin = () => {
   const [animationData, setAnimationData] = useState(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [isClient, setIsClient] = useState(false); // Check if running in the browser
+  const [isClient, setIsClient] = useState(false);
+  const history = useRouter();
 
   const toggleVisibility = () => {
     setIsVisible(!isVisible);
   };
 
   useEffect(() => {
-    // Set isClient to true when this runs in the browser
     setIsClient(true);
 
     fetch(
@@ -26,8 +27,8 @@ const UserLogin = () => {
   }, []);
 
   return (
-    <div className="h-[85vh] overflow-hidden bg-gradient-to-tr from-gray-800 via-newDarkGreen to-gray-800 px-[6vw] flex justify-between items-center">
-      <div className="w-6/12">
+    <div className="h-[85vh] overflow-hidden bg-gradient-to-tr from-gray-800 via-newDarkGreen to-gray-800 px-[6vw] flex md:justify-between justify-center items-center">
+      <div className="w-6/12 md:block hidden">
         {/* {isClient && animationData && (
           <Lottie
             loop
@@ -37,16 +38,18 @@ const UserLogin = () => {
           />
         )} */}
       </div>
-      <div className="w-[40%] bg-footerGreen text-white rounded-xl flex flex-col items-center justify-center py-8">
+      <div className="w-[95%] md:w-[40%] bg-footerGreen text-white rounded-xl flex flex-col items-center justify-center py-8">
         <Image
           src={"/logo.png"}
           width={1000}
           height={1000}
           alt="Logo"
-          className="w-[10vw] cursor-pointer"
+          className="w-[25vw] md:w-[10vw] cursor-pointer"
         />
-        <h4 className="text-2xl font-medium mt-3">Login Your Acccount</h4>
-        <div className="w-9/12 my-10">
+        <h4 className="text-2xl font-medium mt-2 md:mt-3">
+          Login Your Acccount
+        </h4>
+        <div className="w-10/12 md:w-9/12 my-8 md:my-10">
           <div className="w-full">
             <label
               htmlFor="Username"
@@ -84,11 +87,16 @@ const UserLogin = () => {
               </button>
             </div>
           </div>
-          <p className="text-gray-400 mt-2 cursor-pointer">
+          <p className="text-gray-400 mt-2 cursor-pointer md:text-base text-sm">
             Forgot your password?
           </p>
         </div>
-        <button className="px-12 rounded-xl py-3 text-xl bg-white text-footerGreen font-semibold">
+        <button
+          onClick={() => {
+            history.push("/user/dashboard");
+          }}
+          className="px-12 rounded-xl py-2 md:py-3 text-lg md:text-xl bg-white text-footerGreen font-semibold"
+        >
           Login
         </button>
       </div>
