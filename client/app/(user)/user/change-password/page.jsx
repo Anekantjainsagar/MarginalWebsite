@@ -17,12 +17,6 @@ const UserDasbboard = () => {
             </div>
           </div>
           <div className="flex items-center gap-x-5 py-4">
-            <p className="w-[15%] text-end text-lg">Username *</p>
-            <div className="w-[85%]">
-              <Input placeholder="Enter Your Username" />
-            </div>
-          </div>
-          <div className="flex items-center gap-x-5 py-4">
             <p className="w-[15%] text-end text-lg">Email *</p>
             <div className="w-[85%]">
               <Input placeholder="Enter Your Email" />

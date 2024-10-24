@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect } from "react";
 import { AiOutlinePhone } from "react-icons/ai";
 import { FaVideo } from "react-icons/fa";
@@ -30,11 +31,6 @@ const UserDasbboard = () => {
           </div>
         </div>
         <div className="h-[1px] w-full bg-black/30 my-5"></div>
-        <iframe
-          src="https://drive.google.com/file/d/1iRMf7ARSMTwsrwsivLTGjRqAVka28__n/preview"
-          style={{ width: "100%", height: "100%", border: "none" }}
-          allow="autoplay"
-        />
         <div>
           <h6 className="text-2xl font-medium">Rewind Classes</h6>
           <div>
@@ -94,8 +90,15 @@ const UserDasbboard = () => {
 };
 
 const Block = () => {
+  const history = useRouter();
+
   return (
-    <div className="grid grid-cols-2 py-1.5 border-t border-t-gray-400/30 px-4 cursor-pointer">
+    <div
+      onClick={(e) => {
+        history.push(`/user/drive/temp`);
+      }}
+      className="grid grid-cols-2 py-1.5 border-t border-t-gray-400/30 px-4 cursor-pointer"
+    >
       <div className="flex items-center gap-x-2">
         <FaVideo className="text-[#da301f]" />
         <p>Video 1</p>

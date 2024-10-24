@@ -65,7 +65,6 @@ const Navbar = () => {
       </div>
       <div className="gap-x-5 md:flex items-center hidden">
         <IoCall className="text-[40px] border-2 aspect-square rounded-full p-2 cursor-pointer" />
-        <IoIosSearch className="text-[40px] border-2 aspect-square rounded-full p-2 cursor-pointer" />
         <button
           onClick={() => history.push("/login")}
           className="px-8 py-2 rounded-2xl text-lg font-semibold text-newDarkGreen bg-white"
@@ -112,7 +111,6 @@ const Navbar = () => {
             })}
             <div className="flex gap-x-4">
               <IoCall className="text-[35px] md:text-[40px] border aspect-square rounded-full p-2 cursor-pointer my-2" />
-              <IoIosSearch className="text-[35px] md:text-[40px] border aspect-square rounded-full p-2 cursor-pointer my-2" />
             </div>
             <button
               onClick={() => {
