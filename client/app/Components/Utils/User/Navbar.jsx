@@ -13,11 +13,13 @@ const Navbar = () => {
 
   useEffect(() => {
     if (pathname?.includes("user")) {
-      setData([
-        ...data,
-        { title: "Change Password", route: "/user/change-password" },
-        { title: "Logout", route: "" },
-      ]);
+      if (data?.length != 4) {
+        setData([
+          ...data,
+          { title: "Change Password", route: "/user/change-password" },
+          { title: "Logout", route: "/login" },
+        ]);
+      }
     } else {
       setData([
         { title: "Home", route: "/" },
@@ -42,9 +44,14 @@ const Navbar = () => {
             <p
               key={i}
               onClick={() => {
-                history.push(e?.route);
+                if (e?.route) {
+                  history.push(e?.route);
+                } else {
+                }
               }}
-              className="uppercase cursor-pointer"
+              className={`uppercase cursor-pointer ${
+                pathname == e?.route && "border-b"
+              }`}
             >
               {e?.title}
             </p>
