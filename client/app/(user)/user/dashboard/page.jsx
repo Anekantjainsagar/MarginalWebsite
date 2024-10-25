@@ -57,27 +57,6 @@ const UserDasbboard = () => {
               className="w-3/12"
               src="/user/yt.png"
             />
-            <Image
-              alt="Youtube thumbnail"
-              width={1000}
-              height={1000}
-              className="w-3/12"
-              src="/user/yt.png"
-            />
-            <Image
-              alt="Youtube thumbnail"
-              width={1000}
-              height={1000}
-              className="w-3/12"
-              src="/user/yt.png"
-            />
-            <Image
-              alt="Youtube thumbnail"
-              width={1000}
-              height={1000}
-              className="w-3/12"
-              src="/user/yt.png"
-            />
           </div>
         </div>
         <div className="h-[1px] w-full bg-black/30 my-5"></div>
@@ -95,7 +74,10 @@ const Block = () => {
   return (
     <div
       onClick={(e) => {
-        history.push(`/user/drive/temp`);
+        window.open(
+          "https://drive.google.com/file/d/1iRMf7ARSMTwsrwsivLTGjRqAVka28__n/view?usp=drive_link",
+          "__blank"
+        );
       }}
       className="grid grid-cols-2 py-1.5 border-t border-t-gray-400/30 px-4 cursor-pointer"
     >

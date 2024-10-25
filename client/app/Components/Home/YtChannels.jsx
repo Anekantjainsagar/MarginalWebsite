@@ -54,6 +54,7 @@ const YtChannels = () => {
               delay: 3000,
               disableOnInteraction: false,
             }}
+            speed={500} // Adjust this value (in milliseconds) for transition speed
           >
             {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => (
               <SwiperSlide key={i}>

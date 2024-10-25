@@ -33,9 +33,10 @@ const Faculties = () => {
         }}
         loop={true}
         autoplay={{
-          delay: 1000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
+        speed={500} // Adjust this value (in milliseconds) for transition speed
       >
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item, i) => (
           <SwiperSlide key={i}>
@@ -51,8 +52,12 @@ const Faculties = () => {
                   className="w-8/12"
                 />
                 <div className="absolute bottom-2 left-4">
-                  <h6 className="font-semibold text-lg md:text-2xl mt-2">Sarthak Gour</h6>
-                  <p className="text-sm md:text-lg md:my-0.5">Title/Designation</p>
+                  <h6 className="font-semibold text-lg md:text-2xl mt-2">
+                    Sarthak Gour
+                  </h6>
+                  <p className="text-sm md:text-lg md:my-0.5">
+                    Title/Designation
+                  </p>
                 </div>
               </div>
             </div>

@@ -7,21 +7,9 @@ const UserDasbboard = () => {
     <div className="h-[85vh] overflow-hidden bg-gradient-to-tr from-gray-800 via-newDarkGreen to-gray-800 px-[10vw] pt-[4vw] flex justify-between">
       <div className="bg-white w-full rounded-md px-[4vw] py-8">
         <h2 className="text-4xl font-semibold text-center">
-          Edit Your Profile
+          Change Your Password
         </h2>
         <div>
-          <div className="flex items-center gap-x-5 py-4">
-            <p className="w-[15%] text-end text-lg">Name *</p>
-            <div className="w-[85%]">
-              <Input placeholder="Enter Your Name" />
-            </div>
-          </div>
-          <div className="flex items-center gap-x-5 py-4">
-            <p className="w-[15%] text-end text-lg">Email *</p>
-            <div className="w-[85%]">
-              <Input placeholder="Enter Your Email" />
-            </div>
-          </div>
           <div className="flex items-center gap-x-5 py-4">
             <p className="w-[15%] text-end text-lg">Current Password *</p>
             <div className="w-[85%]">
@@ -78,16 +66,6 @@ const PasswordInput = ({ placeholder }) => {
         {isVisible ? <FaEyeSlash /> : <FaEye />}
       </button>
     </div>
-  );
-};
-
-const Input = ({ placeholder }) => {
-  return (
-    <input
-      type={"text"}
-      className="w-full pl-4 pr-10 py-1 outline-none border-b border-b-gray-500 text-gray-900 placeholder-gray-500"
-      placeholder={placeholder}
-    />
   );
 };
 
