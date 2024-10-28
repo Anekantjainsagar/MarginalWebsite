@@ -29,6 +29,7 @@ const Sidebar = () => {
           ].map((e, i) => {
             return (
               <p
+                key={i}
                 className={`mb-3 cursor-pointer w-[60%] rounded-xl text-center py-2 ${
                   pathname === e?.route ? "bg-footerGreen text-white" : ""
                 }`}
